@@ -12,5 +12,13 @@
         </library>
       </libraries>
     </data-source>
+    <data-source source="LOCAL" name="Rails alpha-blog: development" uuid="5d3933da-cb33-4d5a-af17-abd32819ac3c">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
+    </data-source>
   </component>
 </project>
