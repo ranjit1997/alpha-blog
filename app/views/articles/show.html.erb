@@ -1,24 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>AlphaBlog</title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+<div id="page-content">
+  <h1 style="color: #B00100" class="text-center mt-4"><%= @article.title %></h1>
+  <!DOCTYPE html>
+  <html lang="hiii">
+  <head>
+    <title>Show Articles</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<body>
-<h1 style="color: #B00100">This is my show article page</h1>
+  <body style="background-color: lightgray">
+  <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-8 mt-4">
+          <div class="shadow mb-5 bg-white rounded text-center">
+            <div class="card-header font-italic">
+              by Ranjeet Kumar
+            </div>
+            <div class="card-body">
+<!--              <h5 class="card-title font-weight-light"><%#= link_to article.title, article_path(article), class: "text-success" %></h5>-->
+              <div class="card-text text-left"><%= simple_format(@article.description) %></div>
+              <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-success" %>
+              <%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger" %>
 
-<p><strong>Title: </strong><%= @article.title %></p>
-<p><strong>Description: </strong><%= @article.description %></p>
-<p>
-  <%= link_to 'Edit', edit_article_path(@article) %>
-  <%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %>
-  <%= link_to 'Return to articles listing', article_path %>
-</p>
-
-</body>
-</html>
+            </div>
+            <div class="card-footer text-muted">
+              <small>
+                Created ago,
+                edited ago
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <p style="text-align: center" class="text-primary">
+    <%= link_to '[Create new Article]', new_article_path%>
+  </p>
+  </body>
+  </html>
+</div>

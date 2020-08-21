@@ -1,6 +1,23 @@
-<div id="page-content">
-  <h1 style="color: #B00100" class="text-center mt-4">Edit Articles</h1>
-  <%= render 'form' %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Articles</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-<%#= link_to 'Return to articles listing', article_path %>
-</div>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body style="background-color: lightgray">
+  <div id="page-content">
+    <h1 style="color: #B00100" class="text-center mt-4">Edit Articles</h1>
+    <%= render 'form' %>
+
+
+    <p style="text-align: center" class="create-article">
+      <%= link_to '[Create new Article]', new_article_path %>
+    </p>
+  </div>
+</body>
+</html>

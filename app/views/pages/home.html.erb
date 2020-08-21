@@ -1,4 +1,16 @@
-<div id="page-content">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body style="background-color: lightgray">
+  <div id="page-content">
     <div class="container" id="home-container">
       <div class="jumbotron">
         <h1 class="display-4">Alpha Blog</h1>
@@ -8,12 +20,10 @@
         <a class="btn btn-success btn-lg" href="#" role="button">Sign Up!</a>
       </div>
     </div>
+  </div>
+<%= render 'layouts/footer' %>
+</body>
+</html>
 
-    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-      <div class="container text-center">
-        <small>Copyright &copy; <%= link_to "Beta Craft", "https://betacraft.io/", class: "text-white"%></small>
-      </div>
-    </footer>
-</div>
 
 
