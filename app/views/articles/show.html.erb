@@ -17,7 +17,7 @@
         <div class="col-8 mt-4">
           <div class="shadow mb-5 bg-white rounded text-center">
             <div class="card-header font-italic">
-              by Ranjeet Kumar
+              by <%= @article.user.username if @article.user %>
             </div>
             <div class="card-body">
 <!--              <h5 class="card-title font-weight-light"><%#= link_to article.title, article_path(article), class: "text-success" %></h5>-->
