@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
-
-<p>
+<h3 style="text-align: center">User Details</h3>
+<p style="text-align: center" class="mt-4">
   <strong>Username:</strong>
   <%= @user.username %>
 </p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="container" style="text-align: center">
+<%= link_to 'Edit', edit_user_path(@user),class: "btn btn-primary text-white"%>
+<%= link_to 'Back', users_path, class: "btn btn-secondary text-white" %>
+</div>
