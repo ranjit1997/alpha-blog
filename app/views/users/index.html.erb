@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%#= notice %></p>-->
 
-<h1>Users</h1>
+<h3 style="text-align: center" class="mt-4">Users</h3>
 
 <table>
   <thead>
@@ -23,5 +23,7 @@
 </table>
 
 <br>
+<p style="text-align: center" class="mt-4">
+  <%= link_to '[Create New User]', signup_path, class: "text-primary" %>
+</p>
 
-<%= link_to 'New User', new_user_path %>

@@ -25,6 +25,12 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    # if @user.save
+    #   flash[:notice] = "Welcome to the Alpha Blog"
+    #   redirect_to user_path
+    # else
+    #   render 'new'
+    # end
 
     respond_to do |format|
       if @user.save
@@ -62,6 +68,7 @@ class UsersController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
@@ -69,8 +76,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:username)
+      params.require(:user).permit(:username, :email, :password)
     end
-
-
 end
